@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 const Home = () => {
   useEffect(() => {
     if (!navigator.onLine) alert("Connect to internet!");
-  }, [navigator]);
+  }, []); // deleted [navigator] as it was giving warning
  
  useEffect(()=>{
     var cookies = document.cookie.split(";");

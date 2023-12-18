@@ -82,10 +82,11 @@ const Options = () => {
   }, [call.isReceivingCall]);
 
   return (
-    <div >
+    <div className="options">
       <div style={{ marginBottom: "0.5rem" }}>
         <h2>Account Info</h2>
         <Input
+          className="inputgroup"
           size="large"
           placeholder="Your name"
           prefix={<UserOutlined />}
@@ -99,12 +100,12 @@ const Options = () => {
           
         />
 
-        <div >
+        <div className="share_options">
           <CopyToClipboard text={me}>
             <Button
               type="primary"
               icon={<CopyOutlined />}
-              
+              className="btn"
               tabIndex="0"
               onClick={() => message.success("Code copied successfully!")}
             >
@@ -112,7 +113,7 @@ const Options = () => {
             </Button>
           </CopyToClipboard>
 
-          <div >
+          {/* <div >
             <WhatsappShareButton
               url={`https://video-chat-mihir.vercel.app/`}
               title={`Join this meeting with the given code "${me}"\n`}
@@ -132,7 +133,7 @@ const Options = () => {
             >
               <TwitterIcon size={26} round  />
             </TwitterShareButton>
-          </div>
+          </div> */}
         </div>
       </div>
       <div style={{ marginBottom: "0.5rem" }}>
@@ -141,6 +142,7 @@ const Options = () => {
         <Input
           placeholder="Enter code to call"
           size="large"
+          className="inputgroup"
           value={idToCall}
           onChange={(e) => setIdToCall(e.target.value)}
           style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}
@@ -156,6 +158,7 @@ const Options = () => {
           <Button
             variant="contained"
             onClick={leaveCall}
+            className="hang"
             tabIndex="0"
           >
             {/* <img src={Hang} alt="hang up" style={{ height: "15px" }} /> */}
@@ -164,6 +167,7 @@ const Options = () => {
         ) : (
           <Button
             type="primary"
+            className="btn"
             icon={<PhoneOutlined />}
             onClick={() => {
               if (name.length) callUser(idToCall);
@@ -191,14 +195,16 @@ const Options = () => {
                 {call.name} is calling you:{" "}
                 <img
                   src={Phone}
+                  className="phone"
                   alt="phone ringing"
                   style={{ display: "inline-block" }}
                 />
               </h1>
             </div>
-            <div>
+            <div className="btnDiv">
               <Button
                 variant="contained"
+                className="answer"
                 color="#29bb89"
                 icon={<PhoneOutlined />}
                 onClick={() => {
@@ -211,6 +217,7 @@ const Options = () => {
               </Button>
               <Button
                 variant="contained"
+                className="decline"
                 icon={<PhoneOutlined />}
                 onClick={() => {
                   setIsModalVisible(false);

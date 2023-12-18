@@ -8,7 +8,7 @@ const Footer = () => {
       Made By{" "}
       <a
         className="footer__link"
-        href="#!"
+        href="https://github.com/Chriszy00/VideoChatApp-v2.git"
         target="_blank"
         style={{ color: "#fdfdfd" }}
         rel="noreferrer"
