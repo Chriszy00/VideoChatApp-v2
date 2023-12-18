@@ -241,7 +241,7 @@ const Video = () => {
               <i
                 style={{
                   position: "absolute",
-                  top: "0",
+                  top: "1em",
                   left: "0",
                   padding: "0.3rem",
                   backgroundColor: "#fefefebf",

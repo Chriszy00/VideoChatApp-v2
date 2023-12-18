@@ -1,6 +1,6 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
     /* grid-auto-rows: 330px; */
     justify-content: center;
     column-gap: 1rem;
@@ -47,10 +47,11 @@
   }
   
   .video-active {
-    width: 100%;
+    /* width: 100%; */
     background-color: #fefefe;
     height: 300px;
-    margin-top: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
   }
   
   .iconsDiv {
